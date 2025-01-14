@@ -11,14 +11,19 @@ The script uses the following environment variables:
 - `QASE_TARGET_RUN` - id of the manual test run, in the target project.
 - `QASE_CF_ID` - This shall be the custom field's Id in the target project.
 
-If you'd like to run this script on your local machine, clone this repository, set the env varibles above and run `go run .` from the root of your repository. Note that you'll need to have `go` lang installed on your machine. The recommended way to use the script is to fork the repository to your GitHub account and use the GH Action workflows.
+If you'd like to run this script on your local machine, clone this repository, set the env varibles above and run `go run .` from the root of your repository. 
+
+Note that you'll need to have `go` lang installed on your machine. 
+
+The recommended way to use the script is to fork the repository to your GitHub account and use the GH Action workflows.
 
 [This article](https://help.qase.io/en/articles/9787250-how-do-i-find-my-project-code) can help in locating the project codes, or run ids.
 
 <br>
 
 ## How to use?
-- First, we'll need to map the test cases in the target project to corresponding test cases in the source project. Create a custom field at [this page](https://developers.qase.io/reference/create-custom-field). Instructions [here](https://imgur.com/delete/V3zS84Zl6zXJ9Hm).
+- Create a custom field at [this page](https://developers.qase.io/reference/create-custom-field). Instructions [here](https://imgur.com/mNokJNE).
+- First, we'll need to map the test cases in the target project to corresponding test cases in the source project. 
 - Once, the mapping is complete, you can trigger the script from the Actions tab of this repository.
   - There are three workflows available.
   - For all three workflows, variables `QASE_CF_ID`, `QASE_SOURCE_PROJECT` and `QASE_TARGET_PROJECT` can be defined directly in the [fallback.txt](./fallback.txt) file. You can always override the vlaues defined here, while triggering the workflow manually.
