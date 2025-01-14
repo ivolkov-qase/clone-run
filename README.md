@@ -26,6 +26,8 @@ The script uses the following environment variables:
 2. [specify-run.yml](./.github/workflows/specify-run.yml): You can specify the `source` and `target` run ids manually, while starting the workflow.
 3. [trigger-from-qase.yml](./.github/workflows/trigger-from-qase.yml): Same as [1] – it assumes the latest run ids for both the projects, but this workflow can be triggered directly from Qase.
 
+All three workflows upload the test cases' mapping to the GitHub Action run, and also print the respones and payload of all requests to Stdout.
+
 > When starting the third workflow from Qase, make sure to NOT trigger the workflow from either the `source` or `target` project.
 
 <br>
