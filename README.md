@@ -11,6 +11,8 @@ The script uses the following environment variables:
 - `QASE_TARGET_RUN` - id of the manual test run, in the target project.
 - `QASE_CF_ID` - This shall be the custom field's Id in the target project.
 
+If you'd like to run this script on your local machine, clone this repository, set the env varibles above and run `go run .` from the root of your repository. Note that you'll need to have `go` lang installed on your machine. The recommended way to use the script is to fork the repository to your GitHub account and use the GH Action workflows.
+
 [This article](https://help.qase.io/en/articles/9787250-how-do-i-find-my-project-code) can help in locating the project codes, or run ids.
 
 <br>
