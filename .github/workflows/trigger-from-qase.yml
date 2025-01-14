@@ -43,7 +43,8 @@ on:
 env:  # for qase-run-link
   QASE_TESTOPS_PROJECT: ${{ inputs.qase_project_code }}
   QASE_TESTOPS_RUN_ID: ${{ inputs.qase_run_id }}
-
+  QASE_API_BASE_URL: ${{ inputs.qase_api_base_url }}
+  QASE_TESTOPS_API_TOKEN: ${{ secrets.QASE_API_TOKEN }}
 
 jobs:
   run-go-program:
@@ -51,10 +52,6 @@ jobs:
     steps:
       - name: Link GH run with Qase run.
         uses: cskmnrpt/qase-link-run@v2
-        env:
-          QASE_TESTOPS_API_TOKEN: ${{ secrets.QASE_API_TOKEN }}
-          QASE_TESTOPS_PROJECT: ${{ env.QASE_TESTOPS_PROJECT }}
-          QASE_TESTOPS_RUN_ID: ${{ env.QASE_TESTOPS_RUN_ID }}
           
       - name: Checkout repository
         uses: actions/checkout@v3
