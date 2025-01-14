@@ -1,4 +1,4 @@
-name: Run Go Program
+name: Clone from Latest run
 
 on:
   workflow_dispatch:
