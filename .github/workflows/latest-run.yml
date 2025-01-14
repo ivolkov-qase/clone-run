@@ -59,7 +59,7 @@ jobs:
           echo "QASE_API_TOKEN is set."
 
       - name: Fetch Source Project's run
-        id: fetch-latest-run
+        id: fetch-source-run
         run: |
           chmod +x ./fetch-latest-run.sh
           LATEST_RUN_ID=$(./fetch-latest-run.sh)
@@ -70,7 +70,7 @@ jobs:
           QASE_API_TOKEN: ${{ secrets.QASE_API_TOKEN }}
 
       - name: Fetch Target Project's run
-        id: fetch-latest-run
+        id: fetch-target-run
         run: |
           chmod +x ./fetch-latest-run.sh
           LATEST_RUN_ID=$(./fetch-latest-run.sh)
