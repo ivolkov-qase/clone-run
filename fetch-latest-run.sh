@@ -77,4 +77,4 @@ while true; do
 done
 
 # Display the latest run ID
-echo "The latest run ID is: $LATEST_RUN_ID"
+echo "$LATEST_RUN_ID"
