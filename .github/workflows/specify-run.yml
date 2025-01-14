@@ -1,4 +1,4 @@
-name: Run Go Program
+name: Specify Run Ids
 
 on:
   workflow_dispatch:
